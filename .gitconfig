@@ -9,7 +9,7 @@
     # Setting user profiles
     setname = "!git config user.name 'Sandor Zeestraten'"
     setpersonalmail = "!git config user.email 'sandor@zeestrataca.com'"
-    setworkmail = "!git config user.email 'sandor.zeestraten@ntnu.no'"
+    setworkmail = "!git config user.email 'sandor.zeestraten@nina.no'"
     
     # General shorthands
     st = status

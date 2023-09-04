@@ -1,9 +1,6 @@
 [user]
     # Ask for user name and mail in new repositories
     useConfigOnly = true
-    
-[gitreview]
-    username = szeestraten
 
 [alias]
     # Setting user profiles
@@ -12,34 +9,34 @@
     setworkmail = "!git config user.email 'sandor.zeestraten@nina.no'"
     
     # General shorthands
+    a = add . --verbose
     st = status
     cl = clone --recursive
     ai = add --interactive
+
     # commits
     ci = commit
     ca = commit --amend
     cp = cherry-pick
+
     # diff last commit
     dlc = diff --cached HEAD^
+
     # branching
     co = checkout
     cob = checkout -b
     br = branch -ra
+
     # stash   
     sl = stash list
     sa = stash apply
     ss = stash save
 
-    # Rename default commands
-    grep = grep -Ii
-    branch = branch -ra
-    diff = diff --word-diff
-    log = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-
     # Alias new commands
     amend = commit --amend
+    word-diff = diff --word-diff
     filelog = log -u
-    graphlog = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
+    graphlog = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --graph
     # helper alias (used in other aliases)
     branch-name = "!git rev-parse --abbrev-ref HEAD" 
     publish = "!git push -u origin $(git branch-name)"
@@ -71,6 +68,9 @@
     # list all aliases
     la = "!git config -l | grep alias | cut -c 7-"
 
+[commit]
+    verbose = true
+
 [grep]
     linenumber = true
     
@@ -90,6 +90,3 @@
     
 [core]
     editor = vim
-
-[gitreview]
-    username = szeestraten

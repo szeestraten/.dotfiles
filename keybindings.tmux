@@ -23,3 +23,6 @@ bind-key -n M-Up copy-mode \; send-keys PPage
 # Set mouse mode on
 set-option -g mouse on
 
+# Disable default binding of alt+arrow keys
+unbind-key -n M-Left
+unbind-key -n M-Right
